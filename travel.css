@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --white: rgba(255, 255, 255, 0.8);
+  --light-white: rgba(255, 255, 255, 0.5);
+}
+
+header {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  position: absolute;
+  width: 100%;
+}
+header a {
+  color: var(--white);
+}
+a {
+  text-decoration: none;
+}
+.first {
+  display: flex;
+  align-items: center;
+}
+
+header div.first nav {
+  display: inline-flex;
+  padding: 0 10px;
+}
+header div.first nav a {
+  padding: 10px;
+}
+header div.first nav a:nth-child(1) {
+  padding-bottom: 5px;
+}
+
+div.columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.sec i,
+div.sec a {
+  padding: 0px;
+  color: var(--white);
+}
+
+a.logo {
+  font-family: "Bebas", sans-serif;
+  letter-spacing: -3px;
+  font-size: 2rem;
+  padding-right: 10px;
+}
+a.home {
+  border-bottom: 2px solid var(--white);
+}
+a.contact {
+  background-color: #d80848;
+  border-radius: 20px;
+}
+/* intro section */
+div.intro {
+  background-image: url("discover.jpg");
+  background-position: top center;
+  background-size: cover;
+  padding: 300px 20px 80px;
+ 
+  color: var(--light-white);
+}
+
+div.intro nav {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+}
+
+div.intro nav a {
+  
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  color: var(--light-white);
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1.2rem;
+  margin: 0 20px;
+}
+
+div.intro nav a:hover,
+div.intro a.active{
+  font-size: 5rem;
+  color: white;
+  line-height: 1.5rem;
+}
+
+div.intro nav a:hover time,
+div.intro a.active time{
+    display: inline-block;
+    font-size: 1.2rem;
+
+}
+
+div.intro nav a time {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+div.intro nav span {
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+
+div {
+  display: inline-flex;
+  gap: 10px;
+  flex-direction: row;
+}
+
+div.intro span.line {
+  min-width: 20px;
+  height: 2px;
+  background-color: var(--light-white);
+  opacity: 30%;
+  display: inline-block;
+  margin: 0 10px 20px;
+  width: 100%;
+}
