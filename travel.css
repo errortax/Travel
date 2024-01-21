@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: "Roboto", sans-serif;
 }
 :root {
@@ -258,9 +259,9 @@ nav.tabs a.active {
 
 .white-box {
   background: white;
-  color: black;
+  color: rgb(128, 125, 125);
   padding: 30px 20px;
-  position: relative;
+  position: relative; 
 }
 
 
@@ -286,9 +287,10 @@ nav.tabs a.active {
   font-size: 2.7rem;
 }
 
-.about-us.white-box p:nth-child(2){
-    margin-top: 10px;
+div.about-us div.white-box p.sec{
+    margin-top: 20px;
 }
+
 
 .first-div div.white-box::after{
   content: "NT.";
@@ -304,6 +306,11 @@ nav.tabs a.active {
   right: 0;
   bottom: -30px;
  
+}
+
+a.btn:hover{
+  color: #b20606;
+  cursor: pointer;
 }
 
 section.blogs{
