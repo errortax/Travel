@@ -9,15 +9,18 @@
   --white: rgba(255, 255, 255, 0.8);
   --light-white: rgba(255, 255, 255, 0.5);
 }
+img {
+  max-width: 100%;
 
+}
 header {
   padding: 10px 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   position: absolute;
   width: 100%;
 }
 header a {
-  color: var(--white);
+  color: white;
 }
 a {
   text-decoration: none;
@@ -28,11 +31,11 @@ a {
 }
 
 header div.first nav {
-  display: inline-flex;
-  padding: 0 10px;
+  padding: 0 30px;
 }
 header div.first nav a {
   padding: 10px;
+  font-size: 0.8rem;
 }
 header div.first nav a:nth-child(1) {
   padding-bottom: 5px;
@@ -43,13 +46,13 @@ div.columns {
   justify-content: space-between;
   align-items: center;
 }
-div.sec i,
+
 div.sec a {
   padding: 0px;
   color: var(--white);
 }
 
-a.logo {
+a.logo{
   font-family: "Bebas", sans-serif;
   letter-spacing: -3px;
   font-size: 2rem;
@@ -60,63 +63,67 @@ a.home {
 }
 a.contact {
   background-color: #d80848;
-  border-radius: 20px;
+  border-radius: 7px;
 }
 /* intro section */
 div.intro {
   background-image: url("discover.jpg");
   background-position: top center;
   background-size: cover;
-  padding: 300px 20px 80px;
- 
+  padding: 300px 20px 10px;
   color: var(--light-white);
+  display: flex;
+  flex-direction: column;
 }
 
 div.intro nav {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   min-height: 100px;
 }
 
 div.intro nav a {
-  
   text-transform: uppercase;
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: var(--light-white);
   font-family: "Bebas Neue", sans-serif;
-  line-height: 1.2rem;
+  line-height: 1rem;
   margin: 0 20px;
+  width: 100%;
 }
 
 div.intro nav a:hover,
-div.intro a.active{
+div.intro a.active {
   font-size: 5rem;
   color: white;
-  line-height: 1.5rem;
+  line-height: 1.2rem;
 }
 
 div.intro nav a:hover time,
-div.intro a.active time{
-    display: inline-block;
-    font-size: 1.2rem;
-
+div.intro a.active time {
+  font-size: 1.2rem;
 }
 
 div.intro nav a time {
-    display: inline-block;
-    font-size: 0.8rem;
+  display: inline-block;
+  font-size: 0.6rem;
 }
 
 div.intro nav span {
-  font-size: 0.8rem;
+  font-size: 0rem;
   text-transform: lowercase;
 }
 
-div {
+div.intro a:hover span,
+div.intro a.active span {
+  font-size: 0.8rem;
+}
+
+/* div {
   display: inline-flex;
   gap: 10px;
   flex-direction: row;
-}
+} */
 
 div.intro span.line {
   min-width: 20px;
@@ -126,4 +133,311 @@ div.intro span.line {
   display: inline-block;
   margin: 0 10px 20px;
   width: 100%;
+}
+
+div.sec a {
+  padding: 0 10px;
+}
+
+/* social links */
+
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 20px 10px;
+}
+.social-links a {
+  padding: 0 10px;
+  color: white;
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+/* tours */
+
+.sec-image {
+  background: url(city.jpg) top center no-repeat;
+  background-size: 150%;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tours-head {
+  max-width: 700px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content 1fr max-content;
+  padding: 50px 0;
+  gap: 40px;
+  margin: 0 auto;
+}
+h2 {
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 5rem;
+}
+div.tours-head p {
+  margin-right: 50px;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+nav.tabs {
+  display: flex;
+}
+
+nav.tabs a {
+  text-transform: uppercase;
+  color: black;
+  opacity: 0.5;
+  font-size: 0.7rem;
+  padding: 0 5px 4px;
+  border-bottom: 3px solid rgb(0, 0, 0, 0.6);
+}
+
+nav.tabs a.active {
+  border-bottom: 3px solid #b20606;
+  color: #b20606;
+  opacity: 1;
+}
+
+.tour-body {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.tour-body a {
+  scroll-snap-align: start;
+  display: block;
+  width: 180px;
+  height: 250px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tour-body a div.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.tour-body a div.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tour-body a span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/* about us */
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 700px;
+  align-items: center;
+  gap: 40px;
+  margin: 0px auto;
+  padding: 50px 0;
+}
+
+.white-box {
+  background: white;
+  color: black;
+  padding: 30px 20px;
+  position: relative;
+}
+
+
+.about-us.overlay {
+  padding-top: 50px;
+  background: linear-gradient(rgba(255, 255, 255, 0.8) 0, #fff 100%);
+}
+
+
+.outer-video {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.outer-video a.btn {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  background: none;
+  color: white;
+  font-size: 2.7rem;
+}
+
+.about-us.white-box p:nth-child(2){
+    margin-top: 10px;
+}
+
+.first-div div.white-box::after{
+  content: "NT.";
+  background-color: #d80848;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+ 
+}
+
+section.blogs{
+    background: url('mountains2.jpg');
+}
+
+.blog-columns{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+}
+
+.entries{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+}
+a.entry img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.bg{
+    height: 250px;
+}
+
+a.list-entry h3,
+div.content h3{
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-top: 15px;
+    color: black;
+}
+
+a.list-entry p,
+.content p{
+    font-size: .6rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.desc{
+    color: rgba(0,0,0,.5);
+    font-size: .6rem;
+    margin-bottom: 15px;
+}
+
+.contacts{
+    background: url('mountains.jpg');
+    background-size: cover;
+    padding-top: 100px;
+  
+}
+
+div.contact{
+    max-width: 700px;
+   margin: 0 auto;
+  
+    
+}
+div.contact div.white-box{
+    margin-left: auto;
+    padding: 30px 30px;
+    max-width: 400px;
+   
+}
+
+div.info{
+    font-size: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.white-box h3{
+    margin: 10px 0;
+}
+
+input[type='text']{
+    padding: 5px;
+}
+
+button{
+    background-color: #d80848;
+    color: white;
+    padding: 5px;
+    border: 2px solid #d80848;
+    border-radius: 5px;
+  
+}
+
+.footer-columns{
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ gap: 40px;
+ margin:70px auto;
+ max-width: 700px;
+
+}
+
+.div a ul{
+    list-style: none;
+
+}
+
+.div a ul li{
+    color: black;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+.div.logo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  
+    
+}
+
+.div.logo a{
+    padding: 15px 10px 3px;
+    background-color: #d80848;
+    color: white;
+    letter-spacing: -3px;
+  font-size: 1.5rem;
+
+}
+footer p{
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 20px 0;
 }
